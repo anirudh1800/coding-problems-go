@@ -14,6 +14,8 @@ func testPalindrome() {
 	// Palindrome
 	fmt.Println("Longest Palindrome")
 	fmt.Println(longestPalindrome("babad"))
+
+	testNthNodeLL()
 }
 
 func testSecondHighest() {
@@ -40,4 +42,20 @@ func testSecondHighest() {
 	fmt.Println(heap.popElement()) // 5
 
 	fmt.Println(heap.length) // 3
+}
+
+func testNthNodeLL() {
+	head := &ListNode{5, nil}
+
+	head.Next = &ListNode{4, nil}
+	head.Next.Next = &ListNode{3, nil}
+	head.Next.Next.Next = &ListNode{2, nil}
+	head.Next.Next.Next.Next = &ListNode{1, nil}
+
+	display(head)
+
+	removeNthFromEnd(head, 4)
+
+	display(head)
+
 }
