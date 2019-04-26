@@ -6,7 +6,32 @@ import (
 
 func main() {
 
-	testPalindrome()
+	testReverseLL()
+
+}
+
+func testReverseLL() {
+	head := &ListNode{5, nil}
+
+	head.Next = &ListNode{4, nil}
+	head.Next.Next = &ListNode{3, nil}
+	head.Next.Next.Next = &ListNode{2, nil}
+	head.Next.Next.Next.Next = &ListNode{1, nil}
+
+	temp := head
+	for temp != nil {
+		fmt.Printf("%d ", temp.Val)
+		temp = temp.Next
+	}
+
+	head = reverseLL(head, 2)
+
+	fmt.Println()
+
+	for head != nil {
+		fmt.Printf("%d ", head.Val)
+		head = head.Next
+	}
 
 }
 
