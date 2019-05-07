@@ -21,13 +21,10 @@ func twoNumberSum(array []int, target int) []int {
 		idx2, present := hashMap[target - num]
 	
 		if present && idx1 != idx2 {
-			result = make([]int, 2)
 			if num < target - num {
-			 result[0] = num
-			 result[1] = target - num
+				result = []int{num , target - num }
 			} else {
-			 result[0] = target - num
-			 result[1] = num
+				result = []int{target - num , num }
 			}
 		  break
 		}
