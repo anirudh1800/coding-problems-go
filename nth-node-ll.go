@@ -10,7 +10,7 @@ import "fmt"
  * }
  */
 
- // ListNode in LL
+// ListNode in LL
 type ListNode struct {
 	Val  int
 	Next *ListNode

@@ -12,9 +12,9 @@ func permutations(n string, start int) {
 		fmt.Println(n)
 	}
 
-	for i:= start; i < len(n); i++ {
+	for i := start; i < len(n); i++ {
 		n = swap(n, start, i)
-		permutations(n, start + 1)
+		permutations(n, start+1)
 		n = swap(n, start, i)
 	}
 
@@ -27,5 +27,3 @@ func swap(n string, i int, j int) string {
 	r[j] = tmp
 	return string(r)
 }
-
-

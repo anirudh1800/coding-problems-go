@@ -6,7 +6,7 @@ import "reflect"
 
 func main() {
 
-	result := threeNumberSum([]int{1, 2,  4, 5}, 7)
+	result := threeNumberSum([]int{1, 2, 4, 5}, 7)
 
 	fmt.Println(result)
 
@@ -20,7 +20,7 @@ func threeNumberSum(array []int, target int) [][]int {
 
 	sort.Ints(array)
 
-	for i := 0; i < len(array) - 2; i++ {
+	for i := 0; i < len(array)-2; i++ {
 		left := i + 1
 		right := len(array) - 1
 		for left < right {
